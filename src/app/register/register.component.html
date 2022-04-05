@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8 offset-md-2">
+      <div class="card" id="form">
+        <h1 class="mb-3 text-center">Register</h1>
+        <div class="mb-3">
+          <div class="card-body">
+            <form [formGroup]="registerForm" class="mx-auto">
+              <div class="form-group">
+                <label>Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="username"
+                />
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <div class="input-group">
+                  <!-- Change input type to be dynamic -->
+                  <input
+                    [type]="fieldTextType ? 'text' : 'password'"
+                    class="form-control"
+                    formControlName="password"
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">
+                      <i
+                        class="fa"
+                        [ngClass]="{
+                          'fa-eye-slash': !fieldTextType,
+                          'fa-eye': fieldTextType
+                        }"
+                        (click)="toggleFieldTextType()"
+                      ></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Repeat your password</label>
+                <div class="input-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    formControlName="confirmedPassword"
+                    [disabled]="registerForm.invalid"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="example@mail.com"
+                  formControlName="mail"
+                />
+              </div>
+              <button
+                class="btn-primary btn btn-block"
+                [disabled]="registerForm.invalid"
+                (click)="registerUser()"
+              >
+                Register
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

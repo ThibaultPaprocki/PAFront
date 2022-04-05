@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url("assets/images/baam.png");
+  /* background-repeat:; */
+  background-attachment: fixed;
+  /* background-position: center; */
+  background-size: cover;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}

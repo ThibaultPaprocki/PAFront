@@ -1,0 +1,28 @@
+h1 {
+  color: white;
+}
+
+h3 {
+  color: white;
+
+  font-size: 25px;
+}
+
+#form {
+  min-width: 400px;
+  width: 400px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn {
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  background-color: rgba(80, 79, 78);
+}

@@ -1,0 +1,32 @@
+.profil {
+  min-width: 400px;
+  width: 400px;
+}
+
+.card-text {
+  width: 300px;
+}
+
+.card {
+  color: white;
+}
+
+.passwordCancel {
+  margin-right: 10px;
+}
+
+.passwordValidate {
+  margin-left: 10px;
+}
+
+i {
+  cursor: pointer;
+}
+
+i:hover {
+  color: blue;
+}
+
+.password {
+  padding-bottom: 10px;
+}
