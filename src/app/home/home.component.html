@@ -1,40 +1,20 @@
-<ngb-carousel id="slide" class="container text-center">
-  <ng-template ngbSlide>
-    <div
-      class="picsum-img-wrapper img_transform text-center"
-      (click)="redirect1()"
-    >
-      <img src="../../assets/images/img1.png" alt="Random first slide" />
+<div>
+  <div class="row">
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select language</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="changeLanguage('javacript')">Javascript</button>
+          <button ngbDropdownItem (click)="changeLanguage('java')">Java</button>
+          <button ngbDropdownItem (click)="changeLanguage('c++')">C++</button>
+        </div>
+      </div>
+      <div class="d-inline">language selected: {{editorOptions.language}}</div>
     </div>
-    <div class="carousel-caption">
-      <h3>Blbl1</h3>
-      <p>
-       blbl1
-      </p>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div
-      class="picsum-img-wrapper img_transform text-center"
-      (click)="redirect2()"
-    >
-      <img src="../../assets/images/img2.png" alt="Random second slide" />
-    </div>
-    <div class="carousel-caption">
-      <h3>Blblb2</h3>
-      <p>blblb2</p>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div
-      class="picsum-img-wrapper img_transform text-center"
-      (click)="redirect3()"
-    >
-      <img src="../../assets/images/img3.jpg" alt="Random third slide" />
-    </div>
-    <div class="carousel-caption">
-      <h3>Blblb3</h3>
-      <p>blbl3</p>
-    </div>
-  </ng-template>
-</ngb-carousel>
+  </div>
+  <div>
+  <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+  <button class="btn" (click)="sendCode()">Compiler</button>
+  <textarea class="bg-dark" [(ngModel)]="codeRecu" (change)="displayCode()"></textarea>
+  </div>
+</div>

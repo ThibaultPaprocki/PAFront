@@ -18,6 +18,15 @@ import { ToastrModule } from "ngx-toastr";
 import { SanitizeHtmlPipe } from "./tool/pipe.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { CommonModule } from "@angular/common";
+import { ColaboratoryComponent } from './colaboratory/colaboratory.component';
+import {AngularEditorModule} from "@geargroup/angular-editor";
+import {MonacoEditorModule} from "ngx-monaco-editor";
+import { SearchComponent } from './search/search.component';
+import {MatSliderModule} from "@angular/material/slider";
+import {MatFormFieldControl, MatFormFieldModule} from "@angular/material/form-field";
+import {MatIconModule} from "@angular/material/icon";
+import {MatInputModule} from "@angular/material/input";
+import { LightProfilComponent } from './light-profil/light-profil.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +39,9 @@ import { CommonModule } from "@angular/common";
     FourOhFourComponent,
     ProfilComponent,
     SanitizeHtmlPipe,
+    ColaboratoryComponent,
+    SearchComponent,
+    LightProfilComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +52,12 @@ import { CommonModule } from "@angular/common";
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    AngularEditorModule,
+    MonacoEditorModule.forRoot(),
     ToastrModule.forRoot(),
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
   ],
   providers: [
     [

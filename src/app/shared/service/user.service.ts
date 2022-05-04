@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "../../../environments/environment";
 import { ProfilRequest } from "../model/profil.request";
+import {User} from "../model/user.model";
 
 @Injectable({
   providedIn: "root",
@@ -19,5 +20,9 @@ export class UserService {
 
   getUsername(idUser: number) {
     return this.httpClient.get<string>(`${environment.url}username${idUser}`);
+  }
+
+  getProfil(username: string) {
+    return this.httpClient.get<User>(`${environment.url}profil${username}`);
   }
 }

@@ -40,8 +40,6 @@ export class ProfilComponent {
     this.updateProfil = new FormGroup({
       mail: new FormControl("", [Validators.email]),
       description: new FormControl("", [Validators.required]),
-      twitch: new FormControl("", [Validators.required]),
-      youtube: new FormControl("", [Validators.required]),
     });
     this.updating = false;
   }
@@ -50,8 +48,6 @@ export class ProfilComponent {
     this.updateProfil.setValue({
       mail: this.currentUser.mail,
       description: this.currentUser.description,
-      twitch: this.currentUser.twitch,
-      youtube: this.currentUser.youtube,
     });
     this.updPassword.setValue({
       username: this.currentUser.username,

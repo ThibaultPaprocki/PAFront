@@ -9,6 +9,8 @@ footer {
   line-height: 25px;
   color: #fcfcfc;
   width: 100%;
+  z-index: 1030;
+  bottom: 0;
 }
 .site-footer hr {
   border-top-color: #fcfcfc;

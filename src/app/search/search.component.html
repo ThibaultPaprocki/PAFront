@@ -1,0 +1,14 @@
+<div>
+  <div [formGroup]="userSearchForm" class="d-flex bg-light px-2 py-3 mb-5 rounded">
+    <mat-form-field class="w-100 mx-4 d-block custom-wrapper" appearance="outline">
+      <input matInput [formControlName]="'userName'" type="text" placeholder="Find user by name .."/>
+    </mat-form-field>
+    <button class="btn" (click)="search()">Search</button>
+  </div>
+  <div *ngIf="users">
+      <div *ngFor="let user of users">
+          <div>PROFILS UTILISATEURS {{user.name}}</div>
+      </div>
+  </div>
+</div>
+

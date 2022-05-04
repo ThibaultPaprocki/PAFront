@@ -58,26 +58,6 @@
         required=""
       />
     </p>
-    <p class="card-text">
-      Twitch Account :<input
-        formControlName="twitch"
-        type="text"
-        class="form-control"
-        id="twitch"
-        placeholder="{{ currentUser.twitch }}"
-        required=""
-      />
-    </p>
-    <p class="card-text mb-3">
-      Youtube Account :<input
-        formControlName="youtube"
-        type="text"
-        class="form-control"
-        id="youtube"
-        placeholder="{{ currentUser.youtube }}"
-        required=""
-      />
-    </p>
     <div class="text-center">
       <button (click)="updateUser()" class="btn btn-primary" type="submit">
         Update
